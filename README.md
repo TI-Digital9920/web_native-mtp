@@ -6,7 +6,7 @@
 - Halaman Default : home, register, login dan panel dahboard
 - Bootstrap 5 + responsive design lengkap dengan alert SWEATALERT2
 
-# Setup Awal (Instal/Download Project)
+# Setup Awal (Install/Download Project)
 ## Persiapan
 - Install text editor (Sublime Teks, Notepad++, Visual Studio Code, Dll) - VSCode (rekomnedasi)
 - Install XAMPP untuk dan mysql minimal 8.1
@@ -41,6 +41,18 @@
 - Routes yang terintegrasi
 - Petunjuk penambahan helper
 - Petunjuk penambahan footer & navbar snippet
+
+### 📝 Keterangan
+
+- **`app/`** → Berisi file utama aplikasi (Controller, security, function, migrasi, dll).  
+- **`public/`** → Folder publik untuk file frontend seperti assets (CSS, JS, img, dan library lainnya) entry point `index.php`.  
+- **`vendor/`** → Folder hasil dari Composer (`composer install`).  
+- **`.htaccess`** → Mengatur routing URL.  
+- **`composer.json`** → Berisi informasi dan dependensi project PHP kamu.  
+- **`composer.lock`** → Mengunci versi dependensi yang digunakan.  
+- **`README.md`** → Dokumentasi utama project ini.
+
+- Opsional, anda dapat menhapus folder `vendor/` dan file `composer.json` dan `composer.lock`, project tetap akan jalan.
 
 
 # Selamat mencoba!
