@@ -1,0 +1,18 @@
+/* tambahan style untuk hero */
+.hero-section {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+
+.hero-card {
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9ff 100%);
+    border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+}
