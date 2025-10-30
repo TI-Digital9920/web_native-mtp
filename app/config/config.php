@@ -29,9 +29,9 @@
         'encryption_key' => 'change_this_to_a_long_random_key_32_chars_min' // penting ganti ini di key utama anda minimal 32 karakter
 
         // Cara mendapatkan keynya berikut :
-        // 1. Buat file baru dengan nama misalnya generate_key.php
-        // 2. masukkan perintah "<?php echo bin2hex(random_bytes(32)); " (Tanpa tanda kutip)
-        // 3. jalankan di browser misalnya localhost/myproject/generate_key.php, lalu copy keynya
+        // 1. Buka terminal VSCode dengan cara tekan keyboard Ctrl + `
+        // 2. masukkan perintah "php -r "echo bin2hex(random_bytes(32));" (Tanpa tanda kutip)
+        // 3. Copy Key
         // 4. masukkan kedalam 'encryption_key' misalnya 'encryption_key' => '0a5a0267a695b85**********48d26d6c1322fd'
         // 5. key digunakan untuk sekali seumur hidup, jangan berikan key ini untuk orang lain
     ];
