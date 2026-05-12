@@ -1,0 +1,32 @@
+{
+    "name": "ti-digital9920/web-native-mtp",
+    "description": "Teamplate PHP Native by Mohammad Tri Putra (Installable via Composer)",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "App\\\\Installer::postInstall"
+        ],
+        "post-update-cmd": [
+            "App\\\\Installer::postInstall"
+        ],
+        "migrate": "php app/system/migrate-runner.php",
+        "serve": "php -S localhost:8080 -t public"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/TI-Digital9920/web_native-mtp.git"
+        }
+    ],
+    "minimum-stability": "stable"
+}

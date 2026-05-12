@@ -1,0 +1,293 @@
+HTML :
+
+{
+	// Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"PHP Tag": {
+		"prefix": "php",
+		"body": "<?php $1 ?>"
+	},
+	"Inline Echo": {
+		"prefix": "=",
+		"body": "<?= $$1; ?>"
+	},
+	"Echo Normal": {
+		"prefix": "echo",
+		"body": "<?php echo $$1; ?>"
+	},
+	"Base URL": {
+		"prefix": [
+			"load"
+		],
+		"body": [
+			"<?= base_url('$1'); ?>"
+		]
+	},
+	"Tombol Submit Di Tekan": {
+		"prefix": [
+			"submit"
+		],
+		"body": [
+			"form_submit('POST', '$1', function() {",
+			"\t// === 1️⃣ Cek Token CSRF ===",
+			"\tif (!verify_csrf($_POST['_csrf_token'] ?? '')) {",
+			"\t\talert('Token CSRF tidak valid.', 'danger');",
+			"\t\treturn;",
+			"\t}",
+			"",
+			"\t// === 2️⃣ Ambil & Amankan Data Input ===",
+			"});"
+		],
+		"description": "Snippet tombol submit dengan verifikasi CSRF"
+	},
+	"Form POST Otomatis": {
+		"prefix": [
+			"pos"
+		],
+		"body": [
+			"<form id=\"${1:nama_id}\" method=\"POST\" action=\"<?= base_url('${2:alamat_logic}') ?>\" autocomplete=\"off\">",
+			"\t<?= csrf_field() ?>",
+			"",
+			"\t<!-- Input Hidden Buat Name Dari Form - Jika Menggunakan > 1 Form Dalam 1 Page -->",
+			"\t<!-- Value Isi Dengan Nama Form -->",
+			"\t<!-- Name Dari Inputan Tidak Perlu Di Ubah -->",
+			"\t<input type=\"hidden\" name=\"form_name\" value=\"form1\">",
+			"",
+			"\t<!-- Lanjutkan Inputan Form -->",
+			"\t",
+			"</form>"
+		],
+		"description": "Membuat form POST dengan hidden input form_name otomatis"
+	},
+	"Reload My Page": {
+		"prefix": [
+			"refreshpage"
+		],
+		"body": [
+			"window.location = window.location.href;"
+		],
+		"description": "Reload ulang halaman"
+	},
+	"Reload Multiple URLs": {
+		"prefix": [
+			"multireload"
+		],
+		"body": [
+			"<script>",
+			"const BASE_URLS = {",
+			"\t'${1:dashboard}': \"<?= base_url('${1:dashboard}') ?>\",",
+			"\t'${2:profile}': \"<?= base_url('${2:profile}') ?>\",",
+			"\t'${3:logout}': \"<?= base_url('${3:logout}') ?>\"",
+			"};",
+			"</>"
+		],
+		"description": "Buat beberapa RELOAD_SUCCESS_URL sekaligus"
+	},
+	"Redirect ke URLs": {
+		"prefix": [
+			"pakaimultireload"
+		],
+		"body": [
+			"window.location.href = BASE_URLS['${1:halaman1}'];"
+		],
+		"description": "Redirect ke URL dari BASE_URLS"
+	},
+	"view public": {
+		"prefix": "view",
+		"body": "view('$1');"
+	},
+	"return view": {
+		"prefix": "return",
+		"body": "return;"
+	},
+	"exit view": {
+		"prefix": "stop",
+		"body": "exit;"
+	},
+	"alert Sukses": {
+		"prefix": "sukses",
+		"body": "alert('$1', 'success');"
+	},
+	"alert Warning": {
+		"prefix": "warning",
+		"body": "alert('$1', 'warning');"
+	},
+	"alert Error": {
+		"prefix": "error",
+		"body": "alert('$1', 'error');"
+	},
+}
+
+
+
+
+JAVASCRIPT :
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Reload My Page": {
+		"prefix": [
+			"refreshpage"
+		],
+		"body": [
+			"window.location = window.location.href;"
+		],
+		"description": "Reload ulang halaman"
+	},
+}
+
+
+
+
+
+
+PHP :
+
+{
+	// Place your snippets for php here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"PHP Tag": {
+		"prefix": "php",
+		"body": "<?php $1 ?>"
+	},
+	"Inline Echo": {
+		"prefix": "=",
+		"body": "<?= $$1; ?>"
+	},
+	"Echo Normal": {
+		"prefix": "echo",
+		"body": "<?php echo $$1; ?>"
+	},
+	"Base URL": {
+		"prefix": [
+			"load"
+		],
+		"body": [
+			"<?= base_url('$1'); ?>"
+		]
+	},
+	"Tombol Submit Di Tekan": {
+		"prefix": [
+			"submit"
+		],
+		"body": [
+			"form_submit('POST', '$1', function() {",
+			"\t// === 1️⃣ Cek Token CSRF ===",
+			"\tif (!verify_csrf($_POST['_csrf_token'] ?? '')) {",
+			"\t\talert('Token CSRF tidak valid.', 'danger');",
+			"\t\treturn;",
+			"\t}",
+			"",
+			"\t// === 2️⃣ Ambil & Amankan Data Input ===",
+			"});"
+		],
+		"description": "Snippet tombol submit dengan verifikasi CSRF"
+	},
+	"Form POST Otomatis": {
+		"prefix": [
+			"pos"
+		],
+		"body": [
+			"<form id=\"${1:nama_id}\" method=\"POST\" action=\"<?= base_url('${2:alamat_logic}') ?>\" autocomplete=\"off\">",
+			"\t<?= csrf_field() ?>",
+			"",
+			"\t<!-- Input Hidden Buat Name Dari Form - Jika Menggunakan > 1 Form Dalam 1 Page -->",
+			"\t<!-- Value Isi Dengan Nama Form -->",
+			"\t<!-- Name Dari Inputan Tidak Perlu Di Ubah -->",
+			"\t<input type=\"hidden\" name=\"form_name\" value=\"form1\">",
+			"",
+			"\t<!-- Lanjutkan Inputan Form -->",
+			"\t",
+			"</form>"
+		],
+		"description": "Membuat form POST dengan hidden input form_name otomatis"
+	},
+	"Reload My Page": {
+		"prefix": [
+			"refreshpage"
+		],
+		"body": [
+			"window.location = window.location.href;"
+		],
+		"description": "Reload ulang halaman"
+	},
+	"Reload Multiple URLs": {
+		"prefix": [
+			"multireload"
+		],
+		"body": [
+			"<script>",
+			"const BASE_URLS = {",
+			"\t'${1:dashboard}': \"<?= base_url('${1:dashboard}') ?>\",",
+			"\t'${2:profile}': \"<?= base_url('${2:profile}') ?>\",",
+			"\t'${3:logout}': \"<?= base_url('${3:logout}') ?>\"",
+			"};",
+			"</>"
+		],
+		"description": "Buat beberapa RELOAD_SUCCESS_URL sekaligus"
+	},
+	"Redirect ke URLs": {
+		"prefix": [
+			"pakaimultireload"
+		],
+		"body": [
+			"window.location.href = BASE_URLS['${1:halaman1}'];"
+		],
+		"description": "Redirect ke URL dari BASE_URLS"
+	},
+	"return view": {
+		"prefix": "return",
+		"body": "return;"
+	},
+	"exit view": {
+		"prefix": "stop",
+		"body": "exit;"
+	},
+	"alert Sukses": {
+		"prefix": "sukses",
+		"body": "alert('$1', 'success');"
+	},
+	"alert Warning": {
+		"prefix": "warning",
+		"body": "alert('$1', 'warning');"
+	},
+	"alert Error": {
+		"prefix": "error",
+		"body": "alert('$1', 'error');"
+	},
+}
+
+

@@ -1,0 +1,33 @@
+# Menonaktifkan tampilan direktori
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # ganti tulisan myproject menjadi nama folder project di root anda
+    RewriteBase /myproject/
+
+    # Routing utama: arahkan semua request ke index.php jika file/folder tidak ditemukan
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
+</IfModule>
+
+# ==============================
+# 🛠 Custom Error Pages Section
+# ==============================
+
+# 401 Tidak Di Izinkan
+ErrorDocument 401 /myproject/public/error/401.php
+
+# 403 Forbidden
+ErrorDocument 403 /myproject/public/error/403.php
+
+# 404 Not Found
+ErrorDocument 404 /myproject/public/error/404.php
+
+# 500 Internal Server Error
+ErrorDocument 500 /myproject/public/error/500.php
+
+# 503 Maintenance Mode
+ErrorDocument 503 /myproject/public/error/503.php

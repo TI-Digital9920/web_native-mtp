@@ -1,0 +1,22 @@
+# Redirect otomatis semua request ke folder public/
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Arahkan semua permintaan ke /public kecuali sudah di sana
+    RewriteCond %{REQUEST_URI} !^/myproject/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+
+    # Hapus tanda # untuk 2 perintah di bawah jika ingin aktifkan mode maintanance
+    # RewriteCond %{REQUEST_URI} !^/myproject/public/error/maintenance.php$
+    # RewriteRule ^(.*)$ error/maintenance.php [R=503,L]
+</IfModule>
+
+# Blokir akses langsung folder logic
+RedirectMatch 403 ^/myproject/app/controller/(Insert|Update|Delete)/
+
+# ==============================
+# 🛠 Custom Error Pages Section
+# ==============================
+
+# 503 Maintenance Mode
+ErrorDocument 503 /myproject/public/error/maintenance.php

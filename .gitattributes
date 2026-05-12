@@ -1,0 +1,6 @@
+/vendor export-ignore
+/.env export-ignore
+/.env.local export-ignore
+/.env.* export-ignore
+/.gitignore export-ignore
+/tests export-ignore

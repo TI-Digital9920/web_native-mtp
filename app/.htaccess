@@ -1,0 +1,7 @@
+# Blokir akses langsung ke folder app
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+
+# Jika mencoba akses langsung, arahkan ke error page
+ErrorDocument 403 /myproject/public/error/403.php
